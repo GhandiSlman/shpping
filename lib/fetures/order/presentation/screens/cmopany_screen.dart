@@ -5,6 +5,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:logistech/core/const/app_consts.dart';
 import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/const/images.dart';
 import 'package:logistech/core/widget/custom_app-bar.dart';
 import 'package:logistech/core/widget/no_internet.dart';
 import 'package:logistech/fetures/notification/presentation/bloc/notification_bloc.dart';
@@ -56,8 +57,8 @@ class CompanyScreen extends StatelessWidget {
                       left: 0,
                       top: 0,
                       child: Container(
-                        width: 10.w,
-                        height: 10.h,
+                        width: 8.w,
+                        height: 8.h,
                         decoration: BoxDecoration(
                           color: AppColor.primary,
                           shape: BoxShape.circle,
@@ -95,7 +96,7 @@ class CompanyScreen extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15.r),
                               child: Image.asset(
-                                'assets/images/logo2.png',
+                                AppImages.companyLogoImage,
                                 height: 120.h,
                                 fit: BoxFit.contain,
                               ),

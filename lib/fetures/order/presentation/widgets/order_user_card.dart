@@ -6,6 +6,8 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:logistech/core/const/app_consts.dart';
 import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/widget/custom_dialog.dart';
+import 'package:logistech/fetures/auth/presentation/widgets/text_widget.dart';
 import 'package:logistech/fetures/order/presentation/bloc/order/order_bloc.dart';
 import 'package:logistech/fetures/order/presentation/screens/location_screen.dart';
 import 'package:logistech/test.dart';
@@ -18,6 +20,7 @@ class OrderUserCard extends StatelessWidget {
   final int index;
   final String sourceOfficeId;
   final String orderId;
+
   const OrderUserCard({
     required this.price,
     required this.payMethod,
@@ -86,7 +89,7 @@ class OrderUserCard extends StatelessWidget {
                                   color: AppColor.primary,
                                   size: 22.sp,
                                 ),
-                                SizedBox(width: 10.w),
+                                10.horizontalSpace,
                                 Expanded(
                                   child: AutoSizeText(
                                     price,
@@ -102,7 +105,7 @@ class OrderUserCard extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 8.h),
+                            8.verticalSpace,
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -111,7 +114,7 @@ class OrderUserCard extends StatelessWidget {
                                   color: AppColor.primary,
                                   size: 22.sp,
                                 ),
-                                SizedBox(width: 10.w),
+                                10.horizontalSpace,
                                 Expanded(
                                   child: AutoSizeText(
                                     payMethod,
@@ -127,7 +130,7 @@ class OrderUserCard extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 8.h),
+                            8.verticalSpace,
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -136,7 +139,7 @@ class OrderUserCard extends StatelessWidget {
                                   color: AppColor.primary,
                                   size: 22.sp,
                                 ),
-                                SizedBox(width: 10.w),
+                                10.horizontalSpace,
                                 Expanded(
                                   child: AutoSizeText(
                                     payType,
@@ -152,7 +155,7 @@ class OrderUserCard extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 8.h),
+                            8.verticalSpace,
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -201,25 +204,56 @@ class OrderUserCard extends StatelessWidget {
                   ),
                 ),
               if (box.read('role') == 'delivery')
-                BlocBuilder<OrderBloc, OrderState>(builder: (context, state) {
-                  return Positioned(
-                    bottom: 10.h,
-                    right: 10.w,
-                    child: IconButton(
-                      // tooltip: 'Show location',
-                      icon: Icon(Iconsax.edit,
-                          color: AppColor.primary, size: 24.sp),
-                      onPressed: () {
-                        print('==============================');
-                        print(orderId);
-                        print('==============================');
-                        context
-                            .read<OrderBloc>()
-                            .add(updateOrderStateEvent(id: orderId));
-                      },
-                    ),
-                  );
-                }),
+                // BlocBuilder<OrderBloc, OrderState>(builder: (context, state) {
+                //   return
+                Positioned(
+                  bottom: 10.h,
+                  right: 10.w,
+                  child: IconButton(
+                    tooltip: 'Deliver this order',
+                    icon: Icon(Iconsax.edit,
+                        color: AppColor.primary, size: 24.sp),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return CustomDialog(
+                              title: TextWidget(
+                                text: 'Update order status',
+                                color: AppColor.primary,
+                              ),
+                              content: TextWidget(
+                                text: 'This action mean that you will start deliver this order',
+                                color: AppColor.greayColor,
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: TextWidget(
+                                    text: 'Cancel',
+                                    color: AppColor.greayColor,
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                    context.read<OrderBloc>().add(
+                                        updateOrderStateEvent(id: orderId));
+                                  },
+                                  child: TextWidget(
+                                    text: 'Update',
+                                    color: AppColor.primary,
+                                  ),
+                                ),
+                              ],
+                            );
+                          });
+                    },
+                  ),
+                ),
+              // }),
             ],
           ),
         ),

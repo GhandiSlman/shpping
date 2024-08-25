@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logistech/core/const/images.dart';
 
 class NoDataWidget extends StatelessWidget {
   const NoDataWidget({
@@ -9,7 +10,7 @@ class NoDataWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child:
-            Image.asset('assets/images/nodata.png'),
+            Image.asset(AppImages.noDataImage),
       );
   }
 }

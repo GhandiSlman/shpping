@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/widget/custom_dialog.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/text_widget.dart';
 
 class LogOutBtnWidget extends StatelessWidget {
@@ -13,8 +14,9 @@ class LogOutBtnWidget extends StatelessWidget {
       onTap: () {
         showDialog(
           context: context,
-          builder: (BuildContext context) {
-            return AlertDialog(
+          builder: (context) {
+            return CustomDialog(
+              onPressed: onPressed,
               title: TextWidget(
                 text: 'Confirm Logout',
                 color: AppColor.primary,
@@ -41,9 +43,6 @@ class LogOutBtnWidget extends StatelessWidget {
                   ),
                 ),
               ],
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(2.r)),
-              ),
             );
           },
         );

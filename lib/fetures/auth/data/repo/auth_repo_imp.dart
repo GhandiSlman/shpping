@@ -3,6 +3,7 @@ import 'package:logistech/core/data/data_state.dart';
 import 'package:logistech/fetures/auth/data/model/check_code_model.dart';
 import 'package:logistech/fetures/auth/data/model/forget_password_model.dart';
 import 'package:logistech/fetures/auth/data/model/login_model.dart';
+import 'package:logistech/fetures/auth/data/model/logout_model.dart';
 import 'package:logistech/fetures/auth/data/model/reset_password_model.dart';
 import 'package:logistech/fetures/auth/data/model/sign_up_model.dart';
 import 'package:logistech/fetures/auth/data/repo/auth_repo.dart';
@@ -61,10 +62,10 @@ class AuthRepoImp implements AuthRepo {
   }
 
   @override
-  Future<DataState> logOut() async {
+  Future<DataState> logOut({required LogoutModel logoutModel}) async {
     final response =
         await _dataService.getData(endPoint: 'logout',
-        fromJson: (Map<String, dynamic> json) => GetLoginModel.fromJson(json),
+        fromJson: (Map<String, dynamic> json) => LogoutModel.fromJson(json),
         );
     return response;
   }

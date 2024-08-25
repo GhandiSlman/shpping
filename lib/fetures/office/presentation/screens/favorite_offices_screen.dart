@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:logistech/core/const/images.dart';
 import 'package:logistech/core/widget/custom_app-bar.dart';
 import 'package:logistech/core/widget/no_internet.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/icon_btn_widget.dart';
@@ -44,7 +45,7 @@ class FavoriteOfficesScreen extends StatelessWidget {
           } else if (state is GetFavoriteOfficeLoadedState) {
             return state.favoriteOfficesModel.isEmpty
                 ? Center(
-                    child: Image.asset('assets/images/nodata.png'),
+                    child: Image.asset(AppImages.noDataImage),
                   )
                 : AnimationLimiter(
                     child: ListView.separated(

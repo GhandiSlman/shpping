@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/const/images.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/text_widget.dart';
 
 class NoInternetWidget extends StatelessWidget {
@@ -23,7 +24,7 @@ class NoInternetWidget extends StatelessWidget {
           SizedBox(
               height: 175.h,
               width: 175.w,
-              child: Image.asset('assets/images/noNet.png')),
+              child: Image.asset(AppImages.noNetImage)),
           TextWidget(
             text: 'SomeThing went wrong.',
             color: AppColor.greayColor,

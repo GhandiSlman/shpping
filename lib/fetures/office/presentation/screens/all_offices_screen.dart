@@ -5,7 +5,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:logistech/core/widget/custom_app-bar.dart';
 import 'package:logistech/core/widget/no_data_widget.dart';
 import 'package:logistech/core/widget/no_internet.dart';
-import 'package:logistech/fetures/office/presentation/widgets/custom_dialog.dart';
+import 'package:logistech/fetures/office/presentation/widgets/custom_governorate_dialog.dart';
 import 'package:logistech/fetures/office/presentation/bloc/office/offices_bloc.dart';
 import 'package:logistech/fetures/office/presentation/widgets/office_card.dart';
 import 'package:logistech/fetures/office/presentation/widgets/shimmer_office_widget.dart';
@@ -20,7 +20,7 @@ class OfficesScreen extends StatelessWidget {
         appBar: const CustomAppBar(
           title: 'Offices',
           trailing: [
-            CustomDialog(),
+            CustomGovernorateDialog(),
             // CustomPopMenu(items: [
             //   PopupMenuItem(
             //     onTap: () {
@@ -51,7 +51,9 @@ class OfficesScreen extends StatelessWidget {
               return state.offices.isEmpty
                   ? const NoDataWidget()
                   : AnimationLimiter(
+                    
                       child: ListView.separated(
+                         
                         itemCount: state.offices.length,
                         itemBuilder: (context, index) {
                           return AnimationConfiguration.staggeredList(

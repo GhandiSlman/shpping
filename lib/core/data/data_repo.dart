@@ -46,7 +46,8 @@ class DataService {
       );
       debugPrint('get param: $queryParameters');
       debugPrint('response: ${response.body}');
-      return handleDataState(response: response, fromJson: fromJson!);
+      return handleDataState(response: response, fromJson: fromJson!
+      );
     } catch (e) {
       debugPrint('Error: $e');
       return DataFailed(
@@ -56,7 +57,7 @@ class DataService {
     }
   }
 
-  Future<DataState<T>> postDataWithPhotor<T>({
+  Future<DataState<T>> postDataWithListOfImages<T>({
     String? token,
     required String endPoint,
     required dynamic data,

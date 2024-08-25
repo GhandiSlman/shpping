@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:logistech/core/widget/circular_loading_widget.dart';
 import 'package:logistech/core/widget/custom_app-bar.dart';
 import 'package:logistech/core/widget/no_data_widget.dart';
 import 'package:logistech/core/widget/no_internet.dart';
@@ -14,7 +15,7 @@ class OrderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        context.read<OrderBloc>().add(GetUserOrderEvent());
+    context.read<OrderBloc>().add(GetUserOrderEvent());
     return Scaffold(
       appBar: const CustomAppBar(
         title: 'My orders',
@@ -55,6 +56,8 @@ class OrderScreen extends StatelessWidget {
             return NoInternetWidget(onTap: () {
               context.read<OrderBloc>().add(GetUserOrderEvent());
             });
+          } else if (state is UpdateOrderStatusLoadingState) {
+            return const CircularLoadingWidget();
           }
           return const SizedBox();
         }),

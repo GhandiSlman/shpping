@@ -21,15 +21,13 @@ class LocationPickerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (box.read('role') == 'client') {
-      context
-          .read<OrderBloc>()
-          .add(GetLocationEvent(id: sourceOfficeId.toString()));
-    } else {
-      context
-          .read<OrderBloc>()
-          .add(GeUsertLocationEvent(id: orderId.toString()));
-    }
+    box.read('role') == 'client'
+        ? context
+            .read<OrderBloc>()
+            .add(GetLocationEvent(id: sourceOfficeId.toString()))
+        : context
+            .read<OrderBloc>()
+            .add(GeUsertLocationEvent(id: orderId.toString()));
 
     return WillPopScope(
       onWillPop: () async {
@@ -55,7 +53,6 @@ class LocationPickerScreen extends StatelessWidget {
             } else if (state is GetOfficeLocationLoadedState ||
                 state is GetOrderLocationLoadedState ||
                 state is SelectLocationOnMapState) {
-              // Extract the selected location from the state if available
               LatLng? location;
               if (state is SelectLocationOnMapState) {
                 location = state.selectedLocatoin;

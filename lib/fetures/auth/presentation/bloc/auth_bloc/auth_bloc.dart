@@ -12,6 +12,7 @@ import 'package:logistech/core/widget/custom_toast.dart';
 import 'package:logistech/fetures/auth/data/model/check_code_model.dart';
 import 'package:logistech/fetures/auth/data/model/forget_password_model.dart';
 import 'package:logistech/fetures/auth/data/model/login_model.dart';
+import 'package:logistech/fetures/auth/data/model/logout_model.dart';
 import 'package:logistech/fetures/auth/data/model/reset_password_model.dart';
 import 'package:logistech/fetures/auth/data/model/sign_up_model.dart';
 import 'package:logistech/fetures/auth/data/repo/auth_repo.dart';
@@ -29,7 +30,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final DataState dataState =
           await _authRepo.signUp(signUpModel: event.signUpModel);
       if (dataState is DataSuccess<GetSignUpModel>) {
-                await box.write('token', dataState.data!.data!.token);
+        await box.write('token', dataState.data!.data!.token);
         await box.write('role', dataState.data!.data!.user!.role);
         await box.write('first_name', dataState.data!.data!.user!.firstName);
         await box.write('last_name', dataState.data!.data!.user!.lastName);
@@ -66,7 +67,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         await box.write('mother_name', dataState.data!.data!.user!.motherName);
         await box.write('email', dataState.data!.data!.user!.email);
         await box.write('phone', dataState.data!.data!.user!.phone);
-        await box.write('national_number', dataState.data!.data!.user!.nationalNumber);
+        await box.write(
+            'national_number', dataState.data!.data!.user!.nationalNumber);
         emit(LoginLoadedState());
       } else if (dataState is DataFailed) {
         emit(LoginErrorState());
@@ -162,8 +164,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
     on<LogOutEvent>((event, emit) async {
       emit(LogoutLoadingState());
-      final result = await _authRepo.logOut();
-      if (result is DataSuccess) {
+      final result = await _authRepo.logOut(logoutModel: LogoutModel());
+      if (result is DataSuccess<LogoutModel>) {
         emit(LogoutLoadedState());
         box
             .remove('token')

@@ -9,8 +9,8 @@ import 'package:logistech/fetures/office/presentation/bloc/governorate/governora
 import 'package:logistech/fetures/office/presentation/bloc/office/offices_bloc.dart';
 import 'package:logistech/fetures/office/presentation/widgets/shimmer_gover_widget.dart';
 
-class CustomDialog extends StatelessWidget {
-  const CustomDialog({super.key});
+class CustomGovernorateDialog extends StatelessWidget {
+  const CustomGovernorateDialog({super.key});
 
   @override
   Widget build(BuildContext context) {

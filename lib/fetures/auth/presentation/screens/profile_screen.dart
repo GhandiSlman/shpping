@@ -111,20 +111,6 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
                 10.verticalSpace,
-                // Row(
-                //   children: [
-                //     Icon(
-                //       Iconsax.card,
-                //       color: AppColor.primary,
-                //     ),
-                //     5.horizontalSpace,
-                //     TextWidget(
-                //       text: box.read('national'),
-                //       color: AppColor.greayColor,
-                //       fontSize: 15.sp,
-                //     ),
-                //   ],
-                // ),
                 100.verticalSpace,
                 const Divider(),
                 10.verticalSpace,

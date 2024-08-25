@@ -20,7 +20,7 @@ import 'package:logistech/fetures/order/presentation/bloc/home/home_bloc.dart';
 import 'package:logistech/fetures/order/presentation/bloc/order/order_bloc.dart';
 import 'package:logistech/my_observer.dart';
 import 'firebase_options.dart';
-import 'package:logistech/core/const/injection_container.dart' as di;
+import 'package:logistech/core/injection_container.dart' as di;
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 String? fcmToken;
@@ -35,6 +35,7 @@ void main() async {
   noti.configurePushNotifications();
   noti.eventListenerCallback();
   await GetStorage.init();
+  print(box.read('token'));
   Bloc.observer = MyBlocObserver();
   await di.init();
   runApp(const MyApp());
@@ -78,7 +79,7 @@ class MyApp extends StatelessWidget {
               routes: AppRouter.routes,
               initialRoute: box.read('token') == null
                   ? AppRouter.loginScreen
-                  : AppRouter.homeScreen, 
+                  : AppRouter.homeScreen,
             );
           },
         ));

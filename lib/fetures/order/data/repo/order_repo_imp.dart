@@ -5,6 +5,7 @@ import 'package:logistech/fetures/order/data/model/company_model.dart';
 import 'package:logistech/fetures/order/data/model/delivery_status_model.dart';
 import 'package:logistech/fetures/order/data/model/location_model.dart';
 import 'package:logistech/fetures/order/data/model/payment_model.dart';
+import 'package:logistech/fetures/order/data/model/update_order_status_model.dart';
 import 'package:logistech/fetures/order/data/model/user_location_model.dart';
 import 'package:logistech/fetures/order/data/repo/order_repo.dart';
 import 'package:logistech/fetures/order/data/model/add_order_model.dart';
@@ -83,9 +84,12 @@ class OrderRepoImp implements OrderRepo {
   }
 
   @override
-  Future<DataState> updateOrder({required String order}) async {
-    final response =
-        await _dataService.getData(endPoint: 'update/order-state/$order');
+  Future<DataState> updateOrder(
+      {required String orderId,
+      required UpdateOrderStatusModel updateOrderStatusModel}) async {
+    final response = await _dataService.getData(
+        endPoint: 'update/order-state/$orderId',
+        fromJson: (json) => UpdateOrderStatusModel.fromJson(json));
 
     return response;
   }

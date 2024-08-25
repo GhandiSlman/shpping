@@ -5,6 +5,7 @@ import 'package:logistech/fetures/order/data/model/delivery_status_model.dart';
 import 'package:logistech/fetures/order/data/model/get_user_order_model.dart';
 import 'package:logistech/fetures/order/data/model/location_model.dart';
 import 'package:logistech/fetures/order/data/model/payment_model.dart';
+import 'package:logistech/fetures/order/data/model/update_order_status_model.dart';
 import 'package:logistech/fetures/order/data/model/user_location_model.dart';
 
 abstract class OrderRepo {
@@ -25,5 +26,5 @@ abstract class OrderRepo {
 
   Future<DataState> getCompany({required CompanyModel companyModel});
 
-   Future<DataState> updateOrder({required String order});
+   Future<DataState> updateOrder({required String orderId , required UpdateOrderStatusModel updateOrderStatusModel});
 }
