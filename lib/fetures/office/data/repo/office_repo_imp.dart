@@ -1,4 +1,4 @@
-import 'package:logistech/core/const/app_consts.dart';
+import 'package:logistech/core/utils/app_consts.dart';
 import 'package:logistech/core/data/data_repo.dart';
 import 'package:logistech/core/data/data_state.dart';
 import 'package:logistech/fetures/office/data/model/favorite_model.dart';

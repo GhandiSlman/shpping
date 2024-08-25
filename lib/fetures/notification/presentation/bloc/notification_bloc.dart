@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:logistech/core/const/app_consts.dart';
+import 'package:logistech/core/utils/app_consts.dart';
 import 'package:logistech/core/data/data_state.dart';
 import 'package:logistech/fetures/notification/data/model/nontification_model.dart';
 import 'package:logistech/fetures/notification/data/repo/noti_repo.dart';

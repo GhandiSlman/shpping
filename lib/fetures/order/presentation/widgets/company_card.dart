@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/text_widget.dart';
 import 'package:logistech/fetures/order/presentation/bloc/company/company_bloc.dart';
 

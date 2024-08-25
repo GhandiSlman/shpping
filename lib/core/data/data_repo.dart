@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
-import 'package:logistech/core/const/app_consts.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/app_consts.dart';
+import 'package:logistech/core/utils/color.dart';
 
 import 'package:logistech/core/network/network_info.dart';
 import 'package:logistech/core/utils/app_router.dart';

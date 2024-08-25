@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 import 'package:logistech/core/widget/custom_dialog.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/text_widget.dart';
 

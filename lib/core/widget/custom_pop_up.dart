@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 
 class CustomPopMenu extends StatelessWidget {
   List<PopupMenuItem<dynamic>> items;

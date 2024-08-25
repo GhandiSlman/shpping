@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:logistech/fetures/notification/presentation/bloc/notification_bloc.dart';
-import 'package:logistech/core/const/app_consts.dart';
+import 'package:logistech/core/utils/app_consts.dart';
 import 'package:logistech/core/notification.dart';
 import 'package:logistech/core/utils/app_router.dart';
 import 'package:logistech/fetures/auth/presentation/bloc/auth_bloc/auth_bloc.dart';

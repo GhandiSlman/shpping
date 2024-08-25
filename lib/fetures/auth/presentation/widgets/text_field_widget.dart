@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 
 class TextFieldWidget extends StatelessWidget {
   final String hintText;

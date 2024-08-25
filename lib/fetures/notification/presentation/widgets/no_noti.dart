@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:logistech/core/const/images.dart';
+import 'package:logistech/core/utils/images.dart';
 
 class NoNotiWidget extends StatelessWidget {
   const NoNotiWidget({

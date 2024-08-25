@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 
 // ignore: must_be_immutable
 class OtpWidget extends StatelessWidget {

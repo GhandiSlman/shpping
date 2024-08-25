@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 import 'package:logistech/core/widget/my_custom_clip.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/text_widget.dart';
 import 'package:logistech/fetures/office/presentation/bloc/favorite/bloc/favorite_state.dart';

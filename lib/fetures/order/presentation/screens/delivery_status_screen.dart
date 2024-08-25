@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:logistech/core/const/app_consts.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/app_consts.dart';
+import 'package:logistech/core/utils/color.dart';
 import 'package:logistech/core/widget/custom_app-bar.dart';
 import 'package:logistech/core/widget/loading_widget.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/btn_widget.dart';

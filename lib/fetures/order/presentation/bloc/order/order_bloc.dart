@@ -3,8 +3,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:logistech/core/const/app_consts.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/app_consts.dart';
+import 'package:logistech/core/utils/color.dart';
 import 'package:logistech/core/data/data_state.dart';
 
 import 'package:logistech/core/widget/custom_toast.dart';

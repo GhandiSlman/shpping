@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:logistech/core/const/color.dart';
+import 'package:logistech/core/utils/color.dart';
 import 'package:logistech/core/widget/custom_app-bar.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/btn_widget.dart';
 import 'package:logistech/fetures/auth/presentation/widgets/icon_btn_widget.dart';
