@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "709108786175",
+    "project_id": "final-22413",
+    "storage_bucket": "final-22413.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709108786175:android:1845a290bfe089954c3dca",
+        "android_client_info": {
+          "package_name": "com.example.shipping_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCptDK8r2AtMRo4BjNVoFvUs7UeBTR8WcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
