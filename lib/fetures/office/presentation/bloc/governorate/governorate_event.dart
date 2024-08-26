@@ -8,3 +8,4 @@ sealed class GovernorateEvent extends Equatable {
 }
 //Gover
 class GetGovernoratesEvent extends GovernorateEvent{}
+

@@ -55,7 +55,7 @@ class DeliveryStatusScreen extends StatelessWidget {
                         "Let's keep delivering excellence together, please update your status when you start work.",
                     color: AppColor.secoundPrimary,
                   ),
-                  50.verticalSpace,
+                  25.verticalSpace,
                   BlocBuilder<DeliveryBloc, DeliveryState>(
                     builder: (context, state) {
                       if (state is DeliveryStatusLoadingState) {
@@ -73,6 +73,28 @@ class DeliveryStatusScreen extends StatelessWidget {
                               ),
                             ),
                             children: [
+                              const Divider(),
+                              12.5.verticalSpace,
+                              Container(
+                                width: 75.w,
+                                height: 40.h,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: box.read('status') == true
+                                            ? AppColor.primary
+                                            : AppColor.greayColor),
+                                    borderRadius: BorderRadius.circular(10.r)),
+                                child: Center(
+                                  child: TextWidget(
+                                      color: box.read('status') == true
+                                          ? AppColor.primary
+                                          : AppColor.greayColor,
+                                      text: box.read('status') == true
+                                          ? 'Online'
+                                          : 'Offline'),
+                                ),
+                              ),
+                              25.verticalSpace,
                               BtnWidget(
                                 text: 'Update',
                                 onTap: () {

@@ -25,6 +25,7 @@ class GetNotiModelData {
   String? title;
   String? message;
 
+
   GetNotiModelData({this.title, this.message});
 
   GetNotiModelData.fromJson(Map<String, dynamic> json) {

@@ -11,10 +11,10 @@ class GetAllOfficesEvent extends OfficesEvent {}
 
 class GetAllFilterdOfficesEvent extends OfficesEvent {
   final String gover;
- 
-  const GetAllFilterdOfficesEvent({required this.gover });
+
+  const GetAllFilterdOfficesEvent({required this.gover});
   @override
-  List<Object> get props => [gover ];
+  List<Object> get props => [gover];
 }
 
 

@@ -51,3 +51,4 @@ final class GetFilterOfficesErrorState extends OfficesState {
   @override
   List<Object> get props => [message];
 }
+

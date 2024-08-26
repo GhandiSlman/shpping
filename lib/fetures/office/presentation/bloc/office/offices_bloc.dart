@@ -35,7 +35,6 @@ class OfficesBloc extends Bloc<OfficesEvent, OfficesState> {
         emit(GetFilterOfficesErrorState(message: result.errorMessage!));
       }
     });
-
-    
+   
   }
 }

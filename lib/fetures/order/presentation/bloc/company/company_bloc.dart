@@ -1,10 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:logistech/core/data/data_state.dart';
-
 import 'package:logistech/fetures/order/data/model/company_model.dart';
 import 'package:logistech/fetures/order/data/repo/order_repo.dart';
-
 part 'company_event.dart';
 part 'company_state.dart';
 

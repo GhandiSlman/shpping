@@ -20,5 +20,6 @@ class GovernorateBloc extends Bloc<GovernorateEvent, GovernorateState> {
         emit(GetGovernoratesErrorState(message: result.errorMessage!));
       }
     });
+  
   }
 }

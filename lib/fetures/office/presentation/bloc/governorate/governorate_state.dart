@@ -22,9 +22,10 @@ final class GetGovernoratesLoadedState extends GovernorateState {
 
 final class GetGovernoratesErrorState extends GovernorateState {
   final String message;
-  
+
   const GetGovernoratesErrorState({required this.message});
 
   @override
   List<Object> get props => [message];
 }
+
